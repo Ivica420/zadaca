@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="author" content="Ivica Davidović">
+<meta name="description" content="Web projekt - Responsive layout">
+<meta name="keywords" content="HTML5, CSS3, responsive, projekt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Web Projekt</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f4f6f8;
+}
+
+.container{
+display:grid;
+grid-template-areas:
+"header header"
+"nav nav"
+"main aside"
+"footer footer";
+
+grid-template-columns: 3fr 1fr;
+grid-template-rows:auto;
+gap:10px;
+padding:10px;
+}
+
+header{
+grid-area:header;
+background:#1f6aa5;
+color:white;
+padding:30px;
+text-align:center;
+}
+
+nav{
+grid-area:nav;
+background:#1f4f78;
+padding:15px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+
+main{
+grid-area:main;
+background:#2a9bb3;
+padding:20px;
+color:white;
+}
+
+aside{
+grid-area:aside;
+background:#5a76a5;
+padding:20px;
+color:white;
+}
+
+
+footer{
+grid-area:footer;
+background:#7bb7c9;
+padding:20px;
+text-align:center;
+color:white;
+}
+
+
+img{
+width:100%;
+margin-top:15px;
+}
+
+
+table{
+width:100%;
+margin-top:15px;
+border-collapse:collapse;
+background:white;
+color:black;
+}
+
+table, th, td{
+border:1px solid black;
+}
+
+th, td{
+padding:10px;
+text-align:center;
+}
+
+
+@media(max-width:768px){
+
+.container{
+
+grid-template-areas:
+"header"
+"main"
+"nav"
+"aside"
+"footer";
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+	<div class="container">
+
+		<header>
+
+			<h1>Web Projekt</h1>
+			<h2>Responzivni web dizajn</h2>
+
+		</header>
+
+		<nav>
+
+			<a href="#">Pocetna</a>
+			<a href="#">IPv4</a>
+			<a href="#">IPv6</a>
+
+		</nav>
+
+	<main>
+
+			<h2>Glavni sadržaj</h2>
+
+<p>
+An Internet Protocol address (IP address) is a numerical label, such as 192.0.2.1 or 2001:db8::42, that is assigned to a device connected 
+to a computer network that uses the Internet Protocol for communication.[1] IP addresses serve two main functions: network interface identification,
+and location addressing.Internet Protocol version 4 (IPv4) was the first standalone specification for the IP address, and has been in 
+use since 1983.[1] IPv4 addresses are defined as a 32-bit number, which later then became too small to provide enough addresses as the internet grew,
+leading to IPv4 address exhaustion over the 2010s. Its designated successor, IPv6, uses 128 bits for the IP address, giving it a larger address space.
+[2][3][4] Although IPv6 deployment has been ongoing since the mid-2000s, both IPv4 and IPv6 are still used side-by-side as of 2025.
+IP addresses are usually displayed in a human-readable notation, but systems may use them in various different computer number formats. 
+CIDR notation can also be used to designate how much of the address should be treated as a routing prefix. For example, 192.0.2.1/24 indicates that 24
+significant bits of the address are the prefix, with the remaining 8 bits used for host addressing. This is equivalent to the historically used subnet mask 
+(in this case, 255.255.255.0).The IP address space is managed globally by the Internet Assigned Numbers Authority (IANA) and the five 
+regional Internet registries (RIRs). IANA assigns blocks of IP addresses to the RIRs, which are responsible for distributing them to local Internet 
+registries in their region such as internet service providers (ISPs) and large institutions. Some addresses are reserved for private networks and are 
+not globally unique.Within a network, the network administrator assigns an IP address to each device. Such assignments may be on a 
+static (fixed or permanent) or dynamic basis, depending on network practices and software features. Some jurisdictions consider IP addresses 
+to be personal data.
+</p>
+
+			<h3>Slika</h3>
+
+			<img src="IPv4.png" alt="IPv4">
+
+			<h3>Tablica podataka</h3>
+
+	<table>
+		<tr>
+			<th>CLASS</th>
+			<th>LEADING bits</th>
+			<th>Start adress</th>
+		</tr>
+
+		<tr>
+			<td>A</td>
+			<td>0</td>
+			<td>0.0.0.0</td>
+		</tr>
+
+		<tr>
+			<td>B</td>
+			<td>10</td>
+			<td>128.0.0.0</td>
+		</tr>
+
+		<tr>
+			<td>C</td>
+			<td>110</td>
+			<td>192.0.0.0</td>
+		</tr>
+
+	</table>
+
+	<h3>Linkovi</h3>
+
+	<p>
+
+		<a href="https://www.fsre.sum.ba" target="_blank">
+		FSRE Web stranica
+		</a>
+
+	</p>
+
+</main>
+
+<aside>
+
+	<h3>Obavijesti</h3>
+
+	<p>
+		An IP address serves two principal functions: it identifies the host, or more specifically, its network interface, 
+		and it provides the location of the host in the network, and thus, the capability of establishing a path to that host.
+		Its role has been characterized as follows: "A name indicates what we seek. An address indicates where it is. 
+		A route indicates how to get there."[1] The header of each IP 
+		packet contains the IP address of the sending host and that of the destination host.
+	</p>
+
+	<h4>Podnaslov</h4>
+
+	<p>
+		Ovo je dodatni sadržaj u sidebaru.
+	</p>
+
+</aside>
+
+<footer>
+
+	<h3>Podaci o autoru</h3>
+
+	<p>
+		Ivica Davidović (2264/RR) <br>
+		Razvoj web aplikacija <br>
+		<a href="mailto:ivica.davidovic@fsre.sum.ba">
+		ivica.davidovic@fsre.sum.ba
+		</a>
+	</p>
+
+</footer>
+</div>
+</body>
+</html>
